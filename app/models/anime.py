@@ -2,7 +2,11 @@ from pydantic import BaseModel
 
 
 class Anime(BaseModel):
-    id: int
-    title: str
+    anime_id: int
+    name: str
+    episodes: int
     description: str
-    episodes: str
+    type: str
+
+    class Config:
+        from_attributes = True

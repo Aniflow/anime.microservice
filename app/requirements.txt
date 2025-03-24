@@ -1,1 +1,4 @@
 fastapi
+mysql-connector-python
+python-dotenv
+uvicorn
