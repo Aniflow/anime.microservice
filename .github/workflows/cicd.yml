@@ -69,7 +69,7 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/aniflow:anime-ms-latest ./Dockerfile
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/aniflow:anime-ms-latest .
 
     - name: Push the Docker image to Docker Hub
       run: |
