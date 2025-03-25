@@ -1,5 +1,7 @@
 from typing import List, Dict
+
 from mysql.connector import Error
+
 from .database import db
 
 

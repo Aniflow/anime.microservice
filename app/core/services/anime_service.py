@@ -1,4 +1,5 @@
 from typing import List
+
 from ..data.anime_repository import AnimeRepository
 from ...models.anime import Anime
 
