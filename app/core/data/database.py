@@ -23,7 +23,7 @@ class Database:
                 host=os.getenv("DB_HOST", "localhost"),
                 user=os.getenv("DB_USER"),  # Must set via .env
                 password=os.getenv("DB_PASSWORD"),  # Must set via .env
-                database=os.getenv("DB_NAME", "aniflow_db"),
+                database=os.getenv("DB_NAME", "anime_service_db"),
                 port=int(os.getenv("DB_PORT", "3306")),
             )
         except Error as e:
