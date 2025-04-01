@@ -14,6 +14,8 @@ class AnimeService:
             anime = AnimeRepository.get_anime_by_id(anime_id)
 
             if anime:
+                anime["anime_id"] = anime.pop("id")
+
                 return Anime(**anime)
             else:
                 print(f"Service: Anime with ID {anime_id} not found.")
@@ -43,7 +45,7 @@ class AnimeService:
         try:
             animes = AnimeRepository.get_all_anime()
 
-            anime_list = [Anime(**anime) for anime in animes]
+            anime_list = [Anime(**{**anime, "anime_id": anime.pop("id")}) for anime in animes]  # Noqa: E501
 
             return anime_list
 

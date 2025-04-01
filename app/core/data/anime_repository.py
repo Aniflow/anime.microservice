@@ -18,7 +18,7 @@ class AnimeRepository:
 
         cursor = connection.cursor(dictionary=True)
         try:
-            cursor.execute("SELECT * FROM anime")
+            cursor.execute("SELECT * FROM animes")
             results = cursor.fetchall()
             return results
         except Error as e:
@@ -45,7 +45,7 @@ class AnimeRepository:
         cursor = connection.cursor(dictionary=True)
         try:
             cursor.execute(
-                "SELECT * FROM anime WHERE anime_id = %s",
+                "SELECT * FROM animes WHERE id = %s",
                 (anime_id,)
             )
             result = cursor.fetchone()
