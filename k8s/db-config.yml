@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  DB_HOST: "sqldb-aniflow-animedb-p.mysql.database.azure.com"
+  DB_PORT: "3306"
+  DB_NAME: "anime_service_db"
